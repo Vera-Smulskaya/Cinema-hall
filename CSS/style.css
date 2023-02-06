@@ -13,5 +13,88 @@ body {
 .header {
   height: 250px;
   padding: 16px;
-  background-image: url("./");
+  background-image: url("../images/header-background.jpeg");
+  background-position: center center;
+  background-size: cover;
 }
+
+.header__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sort__label,
+.sort__item {
+  display: inline-block;
+  padding: 0 32px;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+  border-bottom: 5px solid transparent;
+}
+
+.sort__item:hover {
+  background-color: #0F0D0E;
+  border-bottom-color: #124c82;
+}
+
+.sidebar {
+  display: inline-block;
+  width: 25%;
+  padding: 32px;
+  float: left;
+}
+
+.content {
+  display: inline-block;
+  width: 75%; 
+}
+
+.card {
+  display: inline-block;
+  width: 45%;
+  height: fit-content;
+  margin-bottom: 32px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: left;
+  background-color: #222;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.card__header {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background-image: url("../images/twilight1.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.card__title {
+  position: absolute;
+  left: 16px;
+  bottom: 32px;
+  font-weight: 900;
+}
+
+.card__info {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  font-weight: 900;
+}
+
+.card__content {
+  padding: 16px;
+  font-size: 0.9rem;
+  line-height: 1.4rem;;
+}
+
+.footer {
+  padding: 32px;
+  background-color: #221F20;
+  text-align: center;
+} 
