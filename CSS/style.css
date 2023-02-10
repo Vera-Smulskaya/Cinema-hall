@@ -61,7 +61,12 @@ body {
   background-color: #222;
   border-radius: 5px;
   overflow: hidden;
+  transition: box-shadow 0.25s transform 0.25s;
+}
 
+.card:hover {
+  box-shadow: 0 0.5rem 0.5rem -0.4rem #777;
+  transform: translateY(-0.25rem);
 }
 
 .card__header {
@@ -78,6 +83,7 @@ body {
   left: 16px;
   bottom: 32px;
   font-weight: 900;
+  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, .5);
 }
 
 .card__info {
@@ -85,12 +91,21 @@ body {
   left: 16px;
   bottom: 16px;
   font-weight: 900;
+  text-shadow: 1px 1px 4px rgba(255, 255, 236, 0.7);
 }
 
 .card__content {
   padding: 16px;
   font-size: 0.9rem;
   line-height: 1.4rem;;
+}
+
+.card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 
 .footer {
