@@ -12,7 +12,12 @@
     <header class="header">
       <h1 class="header__title">Cinema hall</h1>
     </header>
-    <nav class="sort">
+    <nav class="sort" id="sort">
+      <div class="burger" onclick="toggleMobileMenu()">
+        <div class="burger__bar"></div>
+        <div class="burger__bar"></div>
+        <div class="burger__bar"></div>
+      </div>
       <span class="sort__label">Sort for</span>
       <a class="sort__item" href="#">Name</a>
       <a class="sort__item" href="#">Date</a>
@@ -68,5 +73,12 @@
       <p>footer</p>
     </footer>
   </div>
+  <script>
+    const nav = document.getElementById("sort");
+
+    function toggleMobileMenu() {
+      nav.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>

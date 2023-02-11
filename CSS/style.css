@@ -15,11 +15,11 @@ body {
   grid-template-columns: 25% auto;
   grid-template-rows: 250px;
   grid-auto-rows: auto;
-  grid-template-areas: 
-  "hd hd"
-  "nav nav"
-  "sidebar main"
-  "footer footer";
+  grid-template-areas:
+    "hd hd"
+    "nav nav"
+    "sidebar main"
+    "footer footer";
 }
 
 .header {
@@ -50,7 +50,7 @@ body {
 }
 
 .sort__item:hover {
-  background-color: #0F0D0E;
+  background-color: #0f0d0e;
   border-bottom-color: #124c82;
 }
 
@@ -95,7 +95,7 @@ body {
   left: 16px;
   bottom: 32px;
   font-weight: 900;
-  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, .5);
+  -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 0.5);
 }
 
 .card__info {
@@ -109,7 +109,7 @@ body {
 .card__content {
   padding: 16px;
   font-size: 0.9rem;
-  line-height: 1.4rem;;
+  line-height: 1.4rem;
 }
 
 .card__description {
@@ -117,30 +117,60 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 .footer {
   grid-area: footer;
   padding: 32px;
-  background-color: #221F20;
+  background-color: #221f20;
   text-align: center;
-} 
+}
+
+.burger {
+  display: none;
+}
+
+.burger__bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+}
 
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: auto;
     grid-template-rows: 100px;
-    grid-template-areas: 
-    "hd hd"
-    "nav nav"
-    "main main"
-    "footer footer";
+    grid-template-areas:
+      "hd hd"
+      "nav nav"
+      "main main"
+      "footer footer";
   }
 
   .header {
     padding: 0;
     font-size: 20px;
+  }
+
+  .sort {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+  }
+
+  .sort .sort__label,
+  .sort .sort__item {
+    display: none;
+  }
+
+  .sort.open .sort__label,
+  .sort.open .sort__item {
+    display: block;
+    width: 100%;
+    padding: 0;
   }
 
   .sidebar {
@@ -152,5 +182,7 @@ body {
     margin: 0 16px 16px 16px;
   }
 
-  
+  .burger {
+    display: inline-block;
+  }
 }
