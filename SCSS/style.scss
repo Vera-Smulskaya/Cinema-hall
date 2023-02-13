@@ -26,10 +26,8 @@ body {
 
 .header {
   grid-area: hd;
-  padding: 16px;
-  background-image: url("../images/header-background.jpeg");
-  background-position: center center;
-  background-size: cover;
+  padding: $std-indent;
+  @include background-image("../images/header-background.jpeg");
 }
 
 .header__title {
@@ -44,7 +42,7 @@ body {
 
 .sort__label,
 .sort__item {
-  padding: 0 32px;
+  padding: 0 $double-std-indent;
   line-height: 3rem;
   text-decoration: none;
   color: white;
@@ -58,7 +56,7 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  padding: 32px;
+  padding: $double-std-indent;
 }
 
 .content {
@@ -71,9 +69,9 @@ body {
 .card {
   width: 45%;
   height: fit-content;
-  margin-bottom: 32px;
+  margin-bottom: $double-std-indent;
   background-color: $primary-color-light;
-  border-radius: 5px;
+  @include border-radius($radius);
   overflow: hidden;
   transition: box-shadow 0.25s transform 0.25s;
 }
@@ -87,44 +85,38 @@ body {
   position: relative;
   height: 250px;
   overflow: hidden;
-  background-image: url("../images/twilight1.png");
-  background-position: center center;
-  background-size: cover;
+  @include background-image("../images/twilight1.png");
 }
 
 .card__title {
   position: absolute;
-  left: 16px;
-  bottom: 32px;
+  left: $std-indent;
+  bottom: $double-std-indent;
   font-weight: 900;
   -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 0.5);
 }
 
 .card__info {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
+  left: $std-indent;
+  bottom: $std-indent;
   font-weight: 900;
   text-shadow: 1px 1px 4px rgba(255, 255, 236, 0.7);
 }
 
 .card__content {
-  padding: 16px;
+  padding: $std-indent;
   font-size: 0.9rem;
   line-height: 1.4rem;
 }
 
 .card__description {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  @include line-card(3);
 }
 
 .footer {
   grid-area: footer;
-  padding: 32px;
+  padding: $double-std-indent;
   background-color: $primary-color-light;
   text-align: center;
 }
@@ -157,15 +149,16 @@ body {
   }
 
   .sort {
-    padding: 16px;
+    padding: $std-indent;
     flex-direction: column;
     align-items: flex-start;
     height: fit-content;
   }
 
-  .sort .sort__label,
-  .sort .sort__item {
-    display: none;
+  .sort {
+    .sort__item, .sort__label {
+      display: none;
+    }
   }
 
   .sort.open .sort__label,
