@@ -27,7 +27,7 @@ body {
 .header {
   grid-area: hd;
   padding: $std-indent;
-  @include background-image("../images/header-background.jpeg");
+  @include background-img("../images/header-background.jpeg");
 }
 
 .header__title {
@@ -85,7 +85,7 @@ body {
   position: relative;
   height: 250px;
   overflow: hidden;
-  @include background-image("../images/twilight1.png");
+  @include background-img("../images/twilight1.png");
 }
 
 .card__title {
@@ -111,7 +111,7 @@ body {
 }
 
 .card__description {
-  @include line-card(3);
+  @include line-cut(3);
 }
 
 .footer {
