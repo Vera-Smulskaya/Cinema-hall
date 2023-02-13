@@ -1,4 +1,5 @@
-.card__header, .header {
+.card__header,
+.header {
   background-position: center center;
   background-size: cover;
 }
@@ -154,7 +155,8 @@ body {
     align-items: flex-start;
     height: fit-content;
   }
-  .sort .sort__item, .sort .sort__label {
+  .sort .sort__item,
+  .sort .sort__label {
     display: none;
   }
   .sort.open .sort__label,
