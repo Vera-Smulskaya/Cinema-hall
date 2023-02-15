@@ -48,7 +48,8 @@ body {
   color: white;
   border-bottom: 5px solid transparent;
 }
-
+ 
+.sort__item.active, 
 .sort__item:hover {
   background-color: #0f0d0e;
   border-bottom-color: #124c82;

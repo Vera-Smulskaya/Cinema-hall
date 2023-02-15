@@ -1,5 +1,4 @@
-.card__header,
-.header {
+.card__header, .header {
   background-position: center center;
   background-size: cover;
 }
@@ -49,6 +48,7 @@ body {
   border-bottom: 5px solid transparent;
 }
 
+.sort__item.active,
 .sort__item:hover {
   background-color: #0f0d0e;
   border-bottom-color: #124c82;
@@ -155,8 +155,7 @@ body {
     align-items: flex-start;
     height: fit-content;
   }
-  .sort .sort__item,
-  .sort .sort__label {
+  .sort .sort__item, .sort .sort__label {
     display: none;
   }
   .sort.open .sort__label,
