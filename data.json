@@ -1,0 +1,42 @@
+ [
+  {
+    "title": "Twilight",
+    "image":
+      "https://i.pinimg.com/550x/13/59/69/1359696e1122c35769af521a74ed0dcb.jpg",
+    "description":
+      "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
+    "date": "2008-12-05T00:00:00",
+    "duration": "2 hours",
+    "director": "Catherine Hardwicke"
+  },
+  {
+    "title": "Underworld",
+    "image":
+      "https://s5.afisha.ru/mediastorage/a4/ff/18335597ff58466996564365ffa4.jpg",
+    "description":
+      "The story of Selene a Death Dealer bent on destroying the lycans who allegedly killed her family. She discovers that the lycans are pursuing a human, Michael Corvin, for experimentation. ",
+    "date": "2003-09-19T00:00:00",
+    "duration": "2,5 hours",
+    "director": "Len Wiseman"
+  },
+  {
+    "title": "Van Helsing",
+    "image":
+      "https://release-data.com/wp-content/uploads/2017/11/1484301187_van-helsing-2-art-01.jpg",
+    "description":
+      "The famed monster hunter is sent to Transylvania to stop Count Dracula, who is using Dr. Frankenstein's research and a werewolf for nefarious purposes.",
+    "date": "2004-05-07T00:00:00",
+    "duration": "2,1 hours",
+    "director": "Stephen Sommers"
+  },
+  {
+    "title": "Only Lovers Left Alive",
+    "image":
+      "https://www.darksidereviews.com/wp-content/uploads/2015/01/OnlyLoversLeftAlive03.jpg",
+    "description":
+      "A depressed musician reunites with his lover. Though their romance, which has already endured several centuries, is disrupted by the arrival of her uncontrollable younger sister. ",
+    "date": "2013-12-25T00:00:00",
+    "duration": "2,5 hours",
+    "director": "Jim Jarmusch"
+  }
+]
