@@ -1,25 +1,25 @@
-const movies = [
-  {
-    title: "Twilight",
-    image:
-      "https://i.pinimg.com/550x/13/59/69/1359696e1122c35769af521a74ed0dcb.jpg",
-    description:
-      "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
-    date: "2008-12-05T00:00:00",
-    duration: "2 hours",
-    director: "Catherine Hardwicke",
-  },
-  {
-    title: "Pride & Prejudice",
-    image:
-      "https://64.media.tumblr.com/aeeaedd556f7b472480ae6628a60d957/bd2bfb2eb35454d1-d3/s640x960/654dbb8f38eaf287608fb394f3aff7b784d6542f.jpg",
-    description:
-      "Love develops between Elizabeth Bennet, a young woman of rank with no fortune, and Mr. Darcy, a handsome yet reserved man whose large estate is entailed upon his cousin. ",
-    date: "2005-01-28T00:00:00",
-    duration: "2 hours",
-    director: "Joe Wright",
-  },
-];
+// const movies = [
+//   {
+//     title: "Twilight",
+//     image:
+//       "https://i.pinimg.com/550x/13/59/69/1359696e1122c35769af521a74ed0dcb.jpg",
+//     description:
+//       "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
+//     date: "2008-12-05T00:00:00",
+//     duration: "2 hours",
+//     director: "Catherine Hardwicke",
+//   },
+//   {
+//     title: "Pride & Prejudice",
+//     image:
+//       "https://64.media.tumblr.com/aeeaedd556f7b472480ae6628a60d957/bd2bfb2eb35454d1-d3/s640x960/654dbb8f38eaf287608fb394f3aff7b784d6542f.jpg",
+//     description:
+//       "Love develops between Elizabeth Bennet, a young woman of rank with no fortune, and Mr. Darcy, a handsome yet reserved man whose large estate is entailed upon his cousin. ",
+//     date: "2005-01-28T00:00:00",
+//     duration: "2 hours",
+//     director: "Joe Wright",
+//   },
+// ];
 
 function createSorting() {
   const sort = new URLSearchParams(location.search).get("sort");
@@ -75,14 +75,19 @@ function sortMovies(data) {
 }
 
 function init() {
-  const fragment = document.createDocumentFragment();
+  fetch("https://run.mocky.io/v3/05f31f10-7fbf-4de1-b4aa-74fb10b0b968")
+    .then((res) => res.json())
+    .then((data) => sortMovies(data))
+    .then((data) => {
+      const fragment = document.createDocumentFragment();
 
-  sortMovies(movies).forEach((movie) => {
-    fragment.appendChild(createContentTemplate(movie));
-  });
-
-  appendContent("content", fragment);
-  appendContent("sort", createSorting());
+      data.forEach((movie) => {
+        fragment.appendChild(createContentTemplate(movie));
+      });
+    
+      appendContent("content", fragment);
+      appendContent("sort", createSorting());
+    });
 }
 
-init(movies);
+init();
