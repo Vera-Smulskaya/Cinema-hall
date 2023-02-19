@@ -112,14 +112,16 @@ body {
 }
 
 .card__description {
-  @include line-cut(3);
+  @include line-cut(2);
 }
 
 .footer {
   grid-area: footer;
   padding: $double-std-indent;
   background-color: $primary-color-light;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .burger {

@@ -52,7 +52,7 @@ function sortMovies(data) {
 }
 
 function init() {
-  fetch("https://run.mocky.io/v3/05f31f10-7fbf-4de1-b4aa-74fb10b0b968")
+  fetch("https://run.mocky.io/v3/bbc8b1ac-93c1-4029-8885-dc0345bcfdd7")
     .then((res) => res.json())
     .then((data) => sortMovies(data))
     .then((data) => {
